@@ -34,10 +34,10 @@ export function Header() {
 
         <div className="hidden md:flex items-center gap-3">
           <Button variant="ghost" size="sm" asChild>
-            <Link href="/login">Sign In</Link>
+            <Link href="/auth/login">Sign In</Link>
           </Button>
           <Button variant="default" size="sm" asChild>
-            <Link href="/signup">Get Started</Link>
+            <Link href="/auth/signup">Get Started</Link>
           </Button>
         </div>
 
@@ -72,10 +72,10 @@ export function Header() {
           </Link>
           <div className="flex gap-2 pt-2">
             <Button variant="ghost" size="sm" asChild className="flex-1">
-              <Link href="/login">Sign In</Link>
+              <Link href="/auth/login">Sign In</Link>
             </Button>
             <Button variant="default" size="sm" asChild className="flex-1">
-              <Link href="/signup">Get Started</Link>
+              <Link href="/auth/signup">Get Started</Link>
             </Button>
           </div>
         </div>

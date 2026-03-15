@@ -1,6 +1,6 @@
 -- Create users profile table
 CREATE TABLE IF NOT EXISTS profiles (
-  id UUID REFERENCES auth.users(id) PRIMARY KEY ON DELETE CASCADE,
+  id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
   username VARCHAR(255) UNIQUE,
   full_name VARCHAR(255),
   bio TEXT,
