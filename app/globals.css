@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 10 15% 15%;
+  --foreground: 0 0% 98%;
+  --card: 15 20% 22%;
+  --card-foreground: 0 0% 95%;
+  --primary: 270 85% 55%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 200 95% 50%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 270 100% 70%;
+  --accent-foreground: 10 15% 15%;
+  --muted: 0 0% 35%;
+  --muted-foreground: 0 0% 70%;
+  --border: 15 20% 35%;
+  --radius: 0.75rem;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+    --primary: 270 85% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 200 95% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 270 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 0 0% 88%;
+    --muted-foreground: 0 0% 45%;
+    --border: 0 0% 90%;
+  }
+}
+
+* {
+  @apply border-border;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  @apply font-bold;
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted/20;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-muted rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    @apply !animation-none !transition-none;
+  }
+}
+
+/* Focus visible styles */
+:focus-visible {
+  @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background rounded;
+}
+
+/* Smooth transitions */
+button, a, input, select, textarea {
+  @apply transition-colors duration-200;
+}
